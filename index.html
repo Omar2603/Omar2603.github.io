@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="main.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,24 +20,36 @@
         <h1>Omar Abu Awwad</h1>
     </header>
 
-<hr>
+<hr> 
 
-
+<button onclick="promptForName()">Enter Your Name</button>
+<p id="nameDisplay"></p>
 
 <nav>
     <div>
-    <a href="#education">Education History</a>
-    <a href="#school">Schools</a>
-    <a href="#program">Description of Program</a>
-    <a href="#awards">Educational Awards</a>
-    <a href="#activities">Extra-Curricular Activities</a>
-    <a href="#contact">Contact</a>
+        <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onmouseover="toggleHoverEffect(this)" onmouseout="toggleHoverEffect(this)">Education</a>
+            <div class="dropdown-content">
+                <a href="#education">Education History</a>
+                <a href="#program">Program Description</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onmouseover="toggleHoverEffect(this)" onmouseout="toggleHoverEffect(this)">Activities</a>
+            <div class="dropdown-content">
+                <a href="#activities">Extra-Curricular Activities</a>
+                <a href="#awards">Educational Awards</a>
+            </div>
+        </div>
+        <a href="#contact" onmouseover="toggleHoverEffect(this)" onmouseout="toggleHoverEffect(this)">Contact</a>
     </div>
-    
 </nav>
-    
 
 
+<div image>
+    <img src="IMG_8139.jpg" class="selfie" id="clickableSelfie" onclick="zoom(this)" alt="Omar Abu Awwad">
+</div>
 
 <section id="education">
     <p><u><h1>Education History</h1></u><br>
