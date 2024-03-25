@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function zoom(picture) {
         picture.classList.toggle("zoomed");
     }
+    var clickableSelfie = document.getElementById('clickableSelfie');
+    if (clickableSelfie) {
+        clickableSelfie.addEventListener('click', function() {
+            this.classList.toggle("zoomed");
+        });
+    }
 
     //allows for the user input of the user's name to be displayed in between Welcome and !
     function promptForName() {
@@ -68,4 +74,25 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Local storage cleared');
         });
     }
+
+    function increaseFontSize() {
+        var style = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
+        var currentSize = parseFloat(style);
+        document.body.style.fontSize = (currentSize + 1) + 'px';
+    }
+    
+    function decreaseFontSize() {
+        var style = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
+        var currentSize = parseFloat(style);
+        document.body.style.fontSize = (currentSize - 1) + 'px';
+    }
+    
+    function toggleColorTheme() {
+        document.body.classList.toggle('high-contrast');
+    }
+    
+    document.getElementById('increase-font-size').addEventListener('click', increaseFontSize);
+    document.getElementById('decrease-font-size').addEventListener('click', decreaseFontSize);
+    document.getElementById('toggle-color-theme').addEventListener('click', toggleColorTheme);    
+    
 });

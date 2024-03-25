@@ -211,3 +211,15 @@ label, input[type="radio"] {
     display: inline-block;
 }
 
+.high-contrast {
+    background-color: #000;
+    color: #FFF;
+}
+
+.high-contrast h1, 
+.high-contrast h2, 
+.high-contrast p, 
+.high-contrast a {
+    background-color: #000;
+    color: #FF0;
+}

@@ -61,6 +61,14 @@
 
 <hr> 
 
+<!--These Accessibility options buttons are responsible for increasing the font size, decreasing the font size, and lastly responisble for switching the color theme.-->
+
+<div id="accessibilityOptions">
+    <button id="increase-font-size">Increase Font Size</button>
+    <button id="decrease-font-size">Decrease Font Size</button>
+    <button id="toggle-color-theme">Toggle Color Theme</button>
+</div>
+
 <button onclick="promptForName()">Enter Your Name</button>
 <p id="nameDisplay"></p>
 
@@ -85,9 +93,9 @@
     </div>
 </nav>
 
-
+<!--This image is accessiable friendly as it contains an alt feature for people that aren't able to see the picture.-->
 <div image>
-    <img src="selfie.JPG" class="selfie" id="clickableSelfie" onclick="zoom(this)" alt="Omar Abu Awwad">
+    <img src="selfie.JPG" class="selfie" id="clickableSelfie" onclick="zoom(this)" alt=" Selfie Picture of Omar Abu Awwad">
 </div>
 
 <section id="education">
