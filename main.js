@@ -75,18 +75,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    //responsible for increasing font size
     function increaseFontSize() {
         var style = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
         var currentSize = parseFloat(style);
         document.body.style.fontSize = (currentSize + 1) + 'px';
     }
     
+    //responsible for decreasing font size
     function decreaseFontSize() {
         var style = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
         var currentSize = parseFloat(style);
         document.body.style.fontSize = (currentSize - 1) + 'px';
     }
     
+    //responsible for changing the theme of the colors
     function toggleColorTheme() {
         document.body.classList.toggle('high-contrast');
     }
